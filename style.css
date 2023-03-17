@@ -67,12 +67,13 @@ html, body {
 
 .container_conteudo {
     display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .container_2 {
     width: 400px;
     height: 344px;
-    margin-left: 200px;
     border-radius: 4px;
     border: 1px solid #cfcece;
     padding: 0px 0px 0px 15px;
@@ -116,8 +117,6 @@ html, body {
 .container_3 {
     width: 680px;
     height: 281px;
-    margin: 0 200px 0 20px;
-
 }
 
 .container_3 > h2 {
