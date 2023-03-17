@@ -12,11 +12,11 @@ html, body {
 }
 
 .container {
-    max-width: 1100px;
-    width: 100%;
+    width: 1100px;
     margin: auto;
     padding: 0 20px;
     box-sizing: border-box;
+    display: flex;
 }
 
 .header {
@@ -24,37 +24,36 @@ html, body {
     margin-bottom: 30px;
 }
 
-.header__content {
-    display: flex;
-}
-
 .header__logo {
     display: flex;
     align-items: center;
-    flex: auto;
-    gap: 20px;
+    padding-right: 20px;
 }
 
-.header__logo h1 {
+.container h1 {
+    display: flex;
+    padding-top: 10px;
     font-size: 20px;
 }
 
-.header__logo img {
-    max-width: 100%;
+.header__nav {
+    display: flex;
+    flex-direction: row;
 }
 
 .header__nav ul {
- display: flex;
- list-style: none;
- background: white;
- padding: 0;
- width: 100%;
+    display: flex;
+    list-style: none;
+    background: white;
+    padding: 0;
+    width: 100%; 
 }
 
 .header__nav li {
+    display: inline-block;
     margin: 10px 0;
     padding: 0 20px;
-    border-right: 1px solid #333;
+    border-right: 1px solid #979797;
 }
 
 .header__nav li:last-of-type {
@@ -128,11 +127,16 @@ html, body {
 
 .container_3 > table {
     width: 100%;
+    border-spacing: 8px;
 }
-
 
 .elem_esquerda {
     text-align: left;
+    display: inline-block;
+}
+
+.positivo_negativo {
+    width: 20px;
 }
 
 .elem_direita {
@@ -145,4 +149,22 @@ footer {
     height: 8px;
     background-color: #333333;
     bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .container_2 {
+        width: 400px;
+        margin: 0;
+    }
+    .container_3 {
+        width: 652px;
+        word-wrap: break-word;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        background-color: red;
+    }
 }
