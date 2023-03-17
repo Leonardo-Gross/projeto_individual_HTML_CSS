@@ -10,11 +10,17 @@
 <body>
     <header class="header">
         <div class="container">
+            <div class="header__content">
             <div class="header__logo">
                 <img src="imagens/Ellipse 13.png" alt="Logo">
+                <h1>Controle financeiro</h1>
             </div>
-            <h1>Controle financeiro</h1>
             <nav class="header__nav">
+                <input type="checkbox" class="header__navClose">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </input type="checkbox">
                 <ul>
                     <li>
                         <a href="#">Limpar dados</a></li>
@@ -24,10 +30,12 @@
                     </li>
                 </ul>
             </nav>
+            </div>
         </div>
     </header>
-    <div class="container_conteudo">
-        <div class= "container_2">
+    <div class="container">
+        <div class="content">
+        <div class="boxTransacao">
             <h2>Nova transação</h2>
             <label for="Tipo de transação">Tipo de Transação</label>
             <select name="Tipo de transação" id="Tipo de transação">
@@ -39,45 +47,45 @@
             <input type="text" id="Valor">
             <button>Adicionar Transação</button>
         </div>
-        <div class="container_3">
+        <div class="boxExtrato">
             <h2>Extrato de transações</h2>
-            <table>
+            <table class="tabelaExtrato">
                 <thead>
                     <tr>
-                        <th class="elem_esquerda positivo_negativo"></th>
-                        <th class="elem_esquerda">Mercadoria</th>
+                        <th class="positivo_negativo">&nbsp;</th>
+                        <th class="">Mercadoria</th>
                         <th class="elem_direita">Valor</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="elem_esquerda positivo_negativo">+</td>
-                        <td class="elem_esquerda">Lorem ipsum dolor sit amet consectetur</td>
+                        <td class="positivo_negativo">+</td>
+                        <td class="">Lorem ipsum dolor sit amet consectetur</td>
                         <td class="elem_direita">R$ 12.999,99</td>
                     </tr>
                     <tr>
-                        <td class="elem_esquerda positivo_negativo">-</td>
-                        <td class="elem_esquerda">Quis nostrud exercitation</td>
+                        <td class="positivo_negativo">-</td>
+                        <td class="">Quis nostrud exercitation</td>
                         <td class="elem_direita">R$ 99,99</td>
                     </tr>
                     <tr>
-                        <td class="elem_esquerda positivo_negativo">+</td>
-                        <td class="elem_esquerda">Lorem ipsum</td>
+                        <td class="positivo_negativo">+</td>
+                        <td >Lorem ipsum</td>
                         <td class="elem_direita">R$ 9,99</td>
                     </tr>
                 </tbody>
                 <tfoot>
-                    <tr id="table_footer">
-                        <th class="elem_esquerda">Total</th>
+                    <tr class="table_footer">
+                        <th class="positivo_negativo">&nbsp;</th>
+                        <th class="">Total</th>
                         <th class="elem_direita">R$ 12.909,99</th>
                     </tr>
                 </tfoot>
             </table>
         </div>
-
+</div>
     </div>
     <footer>
-
     </footer>
 </body>
 </html>
