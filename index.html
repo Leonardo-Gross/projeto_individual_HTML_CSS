@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle Financeiro</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+            <div class="header__logo">
+        <img src="imagens/Ellipse 13.png" alt="">
+        <h1>Controle financeiro</h1>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li>
+                    <a href="#">Limpar dados</a></li>
+                </li>
+                <li>
+                    <a href="#">Cadastro de transações</a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_conteudo">
+        <div class= "container_2">
+            <h2>Nova transação</h2>
+            <label for="Tipo de transação">Tipo de Transação</label>
+            <select name="Tipo de transação" id="Tipo de transação">
+                <option value="Tipo de transação">Compra</option>
+            </select>
+            <label for="Nome da Mercadoria">Nome da Mercadoria</label>
+            <input type="text" id="Nome da Mercadoria">
+            <label for="Valor">Valor</label>
+            <input type="text" id="Valor">
+            <button>Adicionar Transação</button>
+        </div>
+        <div class="container_3">
+            <h2>Extrato de transações</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="elem_esquerda">Mercadoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="elem_esquerda">+ Lorem ipsum dolor sit amet consectetur</td>
+                        <td class="elem_direita">R$ 12.999,99</td>
+                    </tr>
+                    <tr>
+                        <td class="elem_esquerda">- Quis nostrud exercitation</td>
+                        <td class="elem_direita">R$ 99,99</td>
+                    </tr>
+                    <tr>
+                        <td class="elem_esquerda">+ Lorem ipsum</td>
+                        <td class="elem_direita">R$ 9,99</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="table_footer">
+                        <td class="elem_esquerda">Total</td>
+                        <td class="elem_direita">R$ 12.909,99</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+</html>
