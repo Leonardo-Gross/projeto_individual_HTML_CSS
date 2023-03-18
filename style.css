@@ -40,7 +40,6 @@ html, body {
 }
 
 .header__logo h1 {
-    display: flex;
     font-size: 20px;
 }
 .header__content {
@@ -178,7 +177,7 @@ footer {
     text-align: center;
 }
 
-.header__navClose {
+.nav__crossmark, .header__navClose {
     display: none;
 }
 
@@ -203,6 +202,8 @@ footer {
         width: 252px;
         bottom: 0;   
         flex-direction: column; 
+        transition: all ease-in-out 200ms;
+        transform: translateX(100%);
 
         z-index: 1;
 
@@ -245,71 +246,48 @@ footer {
 
     }
 
-    .header__nav span {
-        margin:0px 0px 0px 25px;
-        margin-bottom: 3px;
+    .nav__hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        justify-content: center;
+    }
+
+    .header__navClose:checked ~ .header__nav {
+        transform: translateX(0%);
+    }
+
+    .nav__crossmark {
+        display: inline-block;
+        margin: 20px 0 0 20px;
+    }
+
+    .nav__hamburger span {
         width: 20px;
-        height: 5px;
+        height: 3px;
         position: relative;
-        background-color: #cdcdcd;
+        background-color: #333;
         border-radius: 3px;
         z-index: 1;
-
-        transform-origin: 4px 0px;
-  
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
-
-    }
-
-    .header__nav span:first-of-type {
-        margin-top: 25px;
-
-    }
-
-    .header__nav span:first-child {
-        transform-origin: 0% 0%;
-    }
-
-    .header__navClose span:nth-last-child(2) {
-        transform-origin: 0% 100%;
-    }
-
-    .header__nav input:checked ~ span {
-        opacity: 1;
-        transform: rotate(55deg) translate(+5px, 1px);
-    }
-    
-    .header__nav input:checked ~ span:nth-last-child(3) {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-
-    .header__nav input:checked ~ span:nth-last-child(2){
-        transform: rotate(-55deg) translate(0px, -3px);
-    }
-
-    .header__navClose {
-        display: inline-block;
-        color: white;
-        margin: 20px;
-        background: none;
-        border: none;
-        text-align: left;
-        width: 20px;        
     }
 
     footer {
         opacity: 0;
     }
 
+    .header__logo h1 {
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
-
     .boxTransacao  h2{
         opacity: 0;
     }
 
+    .header__nav {
+        width: 351px;
+    }
 }
