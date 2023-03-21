@@ -29,7 +29,7 @@ html, body {
 .header {
     width: 100%;
     margin-bottom: 30px;
-    background: #cdcdcd;
+    background: #E0E0E0;
 }
 
 .header__logo {
@@ -79,15 +79,16 @@ html, body {
 .boxTransacao {
     flex: none;
     width: 400px;
-        border-radius: 4px;
-        border: 1px solid #cfcece;
-        padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #cfcece;
+    padding: 15px;
 }
 
 .boxExtrato {
     width: 100%;
     flex: auto;
     margin-left: 20px;
+    padding-top: 15px;
 }
 
 .container_conteudo {
@@ -102,20 +103,20 @@ html, body {
     font-size: 18px;
 }
 
-.boxTransacao > select {
+.campo > select {
     width: 100%;
     height: 32px;
-    color: #888888;
+    color: #333333;
     box-sizing: border-box;
 }
 
-.boxTransacao > label {
+.campo > label {
     display: block;
     padding-top: 20px;
     box-sizing: border-box;
 }
 
-.boxTransacao > input {
+.campo > input {
     width: 100%;
     height: 32px;
     box-sizing: border-box;
@@ -175,6 +176,7 @@ footer {
 
 .boxExtrato h2 {
     text-align: center;
+    font-size: 18px;
 }
 
 .nav__crossmark, .header__navClose {
@@ -237,7 +239,6 @@ footer {
     .header__nav input {
         width: 30px;
         height: 30px;
-        position: absolute;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
@@ -251,6 +252,7 @@ footer {
         flex-direction: column;
         gap: 3px;
         justify-content: center;
+        margin-left: 20px;
     }
 
     .header__navClose:checked ~ .header__nav {
@@ -282,12 +284,56 @@ footer {
 
 }
 
+@media screen and (max-width: 800px) {
+    .campos {
+        display: flex;
+    }
+
+    .boxTransacao button {
+        width: 200px;
+        float: right;
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+    .campo input, select{
+        width: 100%;
+        height: 32px;
+    }
+
+    .campo:first-child {
+        margin-right: 20px;
+    }
+    
+    .campo:last-child {
+        width: 60%;
+    }
+
+    #campo_meio {
+        margin-right: 20px
+    }
+}
+
 @media screen and (max-width: 500px) {
     .boxTransacao  h2{
-        opacity: 0;
+        display: none;
     }
 
     .header__nav {
         width: 351px;
+    }
+
+    .campos {
+        flex-direction: column;
+    }
+
+    .campo:last-child {
+        width: 100%;
+    } 
+
+    .boxTransacao button {
+        width: 100%;
     }
 }
