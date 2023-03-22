@@ -1,339 +1,300 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'Lato';
-    src: url('fontes/Lato-Regular.ttf');
+	font-family: 'Lato';
+	src: url('fontes/Lato-Regular.ttf');
 }
 
 * {
-        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Lato';
-    margin: 0px;
-    padding: 0px;
+html,
+body {
+	font-family: 'Lato';
+	margin: 0px;
+	padding: 0px;
 }
 
 .container {
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-    padding: 0 20px;
+	max-width: 1100px;
+	width: 100%;
+	margin: auto;
+	padding: 0 20px;
 }
 
 .content {
-    display: flex;
+	display: flex;
 }
 
 .header {
-    width: 100%;
-    margin-bottom: 30px;
-    background: #E0E0E0;
+	width: 100%;
+	margin-bottom: 30px;
+	background: #cdcdcd;
 }
 
 .header__logo {
-    display: flex;
-    align-items: center;
-    flex: auto;
-    gap: 20px;
+	display: flex;
+	align-items: center;
+	flex: auto;
+	gap: 20px;
 }
 
 .header__logo h1 {
-    font-size: 20px;
+	font-size: 20px;
 }
+
 .header__content {
-    display: flex;
-    width: 100%;
+	display: flex;
+	width: 100%;
 }
 
 .header__nav {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .header__nav ul {
-    display: flex;
-    list-style: none;
-    background: white;
-    padding: 0;
-    width: 100%; 
+	display: flex;
+	list-style: none;
+	background: white;
+	padding: 0;
+	width: 100%;
 }
 
 .header__nav li {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 0 20px;
-    border-right: 1px solid #979797;
+	display: inline-block;
+	margin: 10px 0;
+	padding: 0 20px;
+	border-right: 1px solid #979797;
 }
 
 .header__nav li:last-of-type {
-    border-right: none;
+	border-right: none;
 }
 
 .header__nav a {
-    color: #333;
-    text-decoration: none;
+	color: #333;
+	text-decoration: none;
 }
 
 .boxTransacao {
-    flex: none;
-    width: 400px;
-    border-radius: 4px;
-    border: 1px solid #cfcece;
-    padding: 15px;
+	flex: none;
+	width: 400px;
+	border-radius: 4px;
+	border: 1px solid #cfcece;
+	padding: 15px;
 }
 
 .boxExtrato {
-    width: 100%;
-    flex: auto;
-    margin-left: 20px;
-    padding-top: 15px;
+	width: 100%;
+	flex: auto;
+	margin-left: 20px;
 }
 
 .container_conteudo {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
 }
 
 
-.boxTransacao > h2 {
-    text-align: center;
-    font-size: 18px;
+.boxTransacao>h2 {
+	text-align: center;
+	font-size: 18px;
 }
 
-.campo > select {
-    width: 100%;
-    height: 32px;
-    color: #333333;
-    box-sizing: border-box;
+.boxTransacao>select {
+	width: 100%;
+	height: 32px;
+	color: #888888;
+	box-sizing: border-box;
 }
 
-.campo > label {
-    display: block;
-    padding-top: 20px;
-    box-sizing: border-box;
+.boxTransacao>label {
+	display: block;
+	padding-top: 20px;
+	box-sizing: border-box;
 }
 
-.campo > input {
-    width: 100%;
-    height: 32px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border-width: 1px;
+.boxTransacao>input {
+	width: 100%;
+	height: 32px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border-width: 1px;
 }
 
-.boxTransacao > button {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 32px;
-    margin-top: 20px;
-    background-color: #333333;
-    border-radius: 4px ;
-    box-shadow: none;
-    border-style: none;
-    color: white;
+.boxTransacao>button {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 32px;
+	margin-top: 20px;
+	background-color: #333333;
+	border-radius: 4px;
+	box-shadow: none;
+	border-style: none;
+	color: white;
 }
 
-.container_3 > h2 {
-    text-align: center;
-    font-size: 18px;
+.container_3>h2 {
+	text-align: center;
+	font-size: 18px;
 }
 
 .tabelaExtrato {
-    width: 100%;
-    border-spacing: 8px;
-    text-align: left;
-    border-collapse: collapse;
-    border-spacing: 0;
+	width: 100%;
+	border-spacing: 8px;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.tabelaExtrato thead, tbody tr {
-    border-bottom: 1px solid #979797;
+.tabelaExtrato thead,
+tbody tr {
+	border-bottom: 1px solid #979797;
 }
 
-.tabelaExtrato th, .tabelaExtrato td {
-    padding: 10px;
+.tabelaExtrato th,
+.tabelaExtrato td {
+	padding: 10px;
 }
 
 .positivo_negativo {
-    width: 20px;
+	width: 20px;
 }
 
 .elem_direita {
-    text-align: right;
+	text-align: right;
 }
 
 footer {
-    position: fixed;
-    width: 100%;
-    height: 8px;
-    background-color: #333333;
-    bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 8px;
+	background-color: #333333;
+	bottom: 0;
 }
 
 .boxExtrato h2 {
-    text-align: center;
-    font-size: 18px;
+	text-align: center;
 }
 
-.nav__crossmark, .header__navClose {
-    display: none;
+.nav__crossmark,
+.header__navClose {
+	display: none;
 }
 
 @media screen and (max-width: 900px) {
-    .content {
-        flex-direction: column;
-    }
+	.content {
+		flex-direction: column;
+	}
 
-    .boxExtrato {
-        margin-left: 0;
-    }
+	.boxExtrato {
+		margin-left: 0;
+	}
 
-    .boxTransacao {
-        width: 100%;
-    }
+	.boxTransacao {
+		width: 100%;
+	}
 
-    .header__nav {
-        background: #333;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 252px;
-        bottom: 0;   
-        flex-direction: column; 
-        transition: all ease-in-out 200ms;
-        transform: translateX(100%);
+	.header__nav {
+		background: #333;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 252px;
+		bottom: 0;
+		flex-direction: column;
+		transition: all ease-in-out 200ms;
+		transform: translateX(100%);
 
-        z-index: 1;
+		z-index: 1;
 
-        -webkit-user-select: none;
-        user-select: none;
-    }
+		-webkit-user-select: none;
+		user-select: none;
 
-    .header__nav ul {
-        background: none;
-        flex-direction: column;
-        text-align: right;
-        
-    }
+	}
 
-    .header__nav a {
-        color: white;
-    }
+	.header__nav ul {
+		background: none;
+		flex-direction: column;
+		text-align: right;
 
-    .header__nav li {
-        height: 32px;
-    }
+	}
 
-    .header__nav li:hover {
-        background-color: #C4C4C4;
-    }
+	.header__nav a {
+		color: white;
+	}
 
-    .header__nav li:hover a{
-        color: #333333;
-    }
+	.header__nav li {
+		height: 32px;
+	}
 
-    .header__nav input {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 2;
+	.header__nav li:hover {
+		background-color: #C4C4C4;
+	}
 
-        -webkit-touch-callout: none;
+	.header__nav li:hover a {
+		color: #333333;
+	}
 
-    }
+	.header__nav input {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
 
-    .nav__hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        justify-content: center;
-        margin-left: 20px;
-    }
+		-webkit-touch-callout: none;
 
-    .header__navClose:checked ~ .header__nav {
-        transform: translateX(0%);
-    }
+	}
 
-    .nav__crossmark {
-        display: inline-block;
-        margin: 20px 0 0 20px;
-    }
+	.nav__hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		justify-content: center;
+	}
 
-    .nav__hamburger span {
-        width: 20px;
-        height: 3px;
-        position: relative;
-        background-color: #333;
-        border-radius: 3px;
-        z-index: 1;
-    }
+	.header__navClose:checked~.header__nav {
+		transform: translateX(0%);
+	}
 
-    footer {
-        opacity: 0;
-    }
+	.nav__crossmark {
+		display: inline-block;
+		margin: 20px 0 0 20px;
+	}
 
-    .header__logo h1 {
-        width: 100%;
-        text-align: center;
-    }
+	.nav__hamburger span {
+		width: 20px;
+		height: 3px;
+		position: relative;
+		background-color: #333;
+		border-radius: 3px;
+		z-index: 1;
+	}
 
-}
+	footer {
+		opacity: 0;
+	}
 
-@media screen and (max-width: 800px) {
-    .campos {
-        display: flex;
-    }
+	.header__logo h1 {
+		width: 100%;
+		text-align: center;
+	}
 
-    .boxTransacao button {
-        width: 200px;
-        float: right;
-    }
-
-    .campo {
-        width: 100%;
-    }
-
-    .campo input, select{
-        width: 100%;
-        height: 32px;
-    }
-
-    .campo:first-child {
-        margin-right: 20px;
-    }
-    
-    .campo:last-child {
-        width: 60%;
-    }
-
-    #campo_meio {
-        margin-right: 20px
-    }
 }
 
 @media screen and (max-width: 500px) {
-    .boxTransacao  h2{
-        display: none;
-    }
+	.boxTransacao h2 {
+		opacity: 0;
+	}
 
-    .header__nav {
-        width: 351px;
-    }
+	.header__nav {
+		width: 351px;
+	}
 
-    .campos {
-        flex-direction: column;
-    }
-
-    .campo:last-child {
-        width: 100%;
-    } 
-
-    .boxTransacao button {
-        width: 100%;
-    }
 }
