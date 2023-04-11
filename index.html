@@ -44,64 +44,43 @@
     </header>
     <div class="container">
         <div class="content">
-            <div class="boxTransacao">
+            <div class="boxTransacao" onsubmit="testaFormulario(event);">
                 <h2>Nova transação</h2>
                 <div class="campos">
                     <div class="campo">
-                        <label for="Tipo de transação">Tipo de Transação</label>
-                        <select name="Tipo de transação" id="Tipo de transação">
-                            <option value="Tipo de transação">Compra</option>
-                        </select>
-                        </div>
-                        <div id="campo_meio" class="campo">
-                            <label for="Nome da Mercadoria">Nome da Mercadoria</label>
-                            <input type="text" id="Nome da Mercadoria">
-                        </div>
-                        <div class="campo">
-                            <label for="Valor">Valor</label>
-                            <input type="text" id="Valor">
-                    </div>
-                </div>
-                <button>Adicionar Transação</button>
+                        <form>
+                            <label for="Tipo de transação">Tipo de Transação</label>
+                            <select name="Tipo de transação" id="Tipo de transação" required>
+                                <option value="true">Compra</option>
+                                <option value="false">Venda</option>
+                            </select>
+                            </div>
+                            <div id="campo_meio" class="campo">
+                                <label for="Nome da Mercadoria">Nome da Mercadoria</label>
+                                <input placeholder=" Digite o nome da Mercadoria" required type="text" id="Nome da Mercadoria">
+                            </div>
+                            <div class="campo">
+                                <label for="Valor">Valor</label>
+                                <input placeholder=" R$ 0,00" required type="text" id="Valor" >
+                                                </div>
+                                            </div>
+                                            <input id="botao" type="submit" value="Adicionar transação">
+                        </form>
             </div>
         <div class="boxExtrato">
             <h2>Extrato de transações</h2>
             <table class="tabelaExtrato">
                 <thead>
                     <tr>
-                        <th class="positivo_negativo">&nbsp;</th>
+                        <th class="compra"></th>
                         <th class="">Mercadoria</th>
                         <th class="elem_direita">Valor</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="positivo_negativo">+</td>
-                        <td class="">Lorem ipsum dolor sit amet consectetur</td>
-                        <td class="elem_direita">R$ 12.999,99</td>
-                    </tr>
-                    <tr>
-                        <td class="positivo_negativo">-</td>
-                        <td class="">Quis nostrud exercitation</td>
-                        <td class="elem_direita">R$ 99,99</td>
-                    </tr>
-                    <tr>
-                        <td class="positivo_negativo">+</td>
-                        <td >Lorem ipsum</td>
-                        <td class="elem_direita">R$ 9,99</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr class="table_footer">
-                        <th class="positivo_negativo">&nbsp;</th>
-                        <th class="">Total</th>
-                        <th class="elem_direita">R$ 12.909,99</th>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>
     <footer>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

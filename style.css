@@ -103,7 +103,7 @@ html, body {
     font-size: 18px;
 }
 
-.campo > select {
+form > select {
     width: 100%;
     height: 32px;
     color: #333333;
@@ -124,7 +124,7 @@ html, body {
     border-width: 1px;
 }
 
-.boxTransacao > button {
+.boxTransacao > input {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -147,18 +147,19 @@ html, body {
     border-spacing: 8px;
     text-align: left;
     border-collapse: collapse;
-    border-spacing: 0;
 }
 
 .tabelaExtrato thead, tbody tr {
     border-bottom: 1px solid #979797;
 }
 
+
+
 .tabelaExtrato th, .tabelaExtrato td {
     padding: 10px;
 }
 
-.positivo_negativo {
+.compra {
     width: 20px;
 }
 
