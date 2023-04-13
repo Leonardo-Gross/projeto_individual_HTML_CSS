@@ -32,10 +32,10 @@
                 </label>
                     <ul>
                         <li>
-                            <a href="#">Limpar dados</a></li>
+                            <a href="#" class="link_limpar" id="link_limpar" type="button" onclick="transacoes.localStorage.clear()">Limpar dados </a>
                         </li>
                         <li>
-                            <a href="#">Cadastro de transações</a></li>
+                            <a id="pag_inicial" href="./index.html">Cadastro de transações</a></li>
                         </li>
                     </ul>
                 </nav>
@@ -49,19 +49,19 @@
                 <div class="campos">
                     <div class="campo">
                         <form>
-                            <label for="Tipo de transação">Tipo de Transação</label>
-                            <select name="Tipo de transação" id="Tipo de transação" required>
+                            <label for="tipo_transacao">Tipo de Transação</label>
+                            <select name="tipo_transacao" id="tipo_transacao" required>
                                 <option value="true">Compra</option>
                                 <option value="false">Venda</option>
                             </select>
                             </div>
                             <div id="campo_meio" class="campo">
-                                <label for="Nome da Mercadoria">Nome da Mercadoria</label>
-                                <input placeholder=" Digite o nome da Mercadoria" required type="text" id="Nome da Mercadoria">
+                                <label for="nome">Nome da Mercadoria</label>
+                                <input placeholder=" Digite o nome da Mercadoria" required type="text" id="nome">
                             </div>
                             <div class="campo">
-                                <label for="Valor">Valor</label>
-                                <input placeholder=" R$ 0,00" required type="text" id="Valor" >
+                                <label for="valor">Valor</label>
+                                <input placeholder=" R$ 0,00" required type="text" id="valor" >
                                                 </div>
                                             </div>
                                             <input id="botao" type="submit" value="Adicionar transação">
@@ -74,8 +74,15 @@
                     <tr>
                         <th class="compra"></th>
                         <th class="">Mercadoria</th>
-                        <th class="elem_direita">Valor</th>
+                        <th class="elem_direita">Valor</th> 
                     </tr>
+                </thead>
+                <!-- <tbody>
+                    <tr class="container_tabela_3">
+                        <td class="tabela_corpo">Nenhuma transação cadastrada</td>
+                    </tr>
+                </tbody> -->
+                <tfoot></tfoot>
             </table>
         </div>
     </div>
