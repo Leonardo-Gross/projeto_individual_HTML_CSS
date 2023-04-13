@@ -61,7 +61,7 @@
                             </div>
                             <div class="campo">
                                 <label for="valor">Valor</label>
-                                <input placeholder=" R$ 0,00" required type="text" id="valor" >
+                                <input placeholder=" R$ 0,00" required type="text" id="valor" maxlength="22" onkeypress="return(MascaraMoeda(this,'.',',',event))" >
                                                 </div>
                                             </div>
                                             <input id="botao" type="submit" value="Adicionar transação">
@@ -77,11 +77,12 @@
                         <th class="elem_direita">Valor</th> 
                     </tr>
                 </thead>
-                <!-- <tbody>
-                    <tr class="container_tabela_3">
-                        <td class="tabela_corpo">Nenhuma transação cadastrada</td>
+                 <tbody class="corpo_tabela">
+                    <tr>
+                        <td class="compra"></td>
+                        <td class="conteudo_tabela">Nenhuma transação cadastrada</td>
                     </tr>
-                </tbody> -->
+                </tbody> 
                 <tfoot></tfoot>
             </table>
         </div>

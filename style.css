@@ -167,11 +167,18 @@ form > select {
     text-align: right;
 }
 
-.container_tabela_3 {
-    display: flex;
-    justify-content: space-around;
+.conteudo_tabela {
     width: 100%;
-  }
+    text-align: center;
+}
+
+tfoot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
 
 footer {
     position: fixed;
