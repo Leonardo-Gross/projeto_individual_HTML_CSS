@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Controle Financeiro</title>
+    <title>Controles Financeiro</title>
 </head>
 <body>
     <header class="header">
@@ -22,14 +22,14 @@
                 </label>
                 <input id="nav__toggle" type="checkbox" class="header__navClose" />
                 <nav class="header__nav">
-                <label for="nav__toggle" class="nav__crossmark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 373 373">
-                    <path
-                    fill="white"
-                        d="M364.145 7.86654C353.645 -2.61786 336.624 -2.62306 326.124 7.87175L186.017 148.018L45.897 7.87175C35.397 -2.62825 18.3757 -2.61785 7.87565 7.86654C-2.62435 18.3665 -2.62435 35.3879 7.87044 45.8879L147.99 186.035L7.87044 326.181C-2.61916 336.681 -2.61916 353.703 7.87565 364.203C13.1257 369.442 20.0007 372.072 26.8863 372.072C33.7612 372.072 40.6463 369.442 45.897 364.197L186.017 224.037L326.137 364.184C331.387 369.434 338.272 372.059 345.148 372.059C352.023 372.059 358.908 369.429 364.158 364.189C374.658 353.689 374.658 336.668 364.158 326.168L224.025 186.035L364.145 45.8879C374.645 35.3879 374.645 18.3612 364.145 7.86654Z"
-                        fill="black" />
-                </svg>
-                </label>
+                    <label for="nav__toggle" class="nav__crossmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 373 373">
+                            <path
+                            fill="white"
+                            d="M364.145 7.86654C353.645 -2.61786 336.624 -2.62306 326.124 7.87175L186.017 148.018L45.897 7.87175C35.397 -2.62825 18.3757 -2.61785 7.87565 7.86654C-2.62435 18.3665 -2.62435 35.3879 7.87044 45.8879L147.99 186.035L7.87044 326.181C-2.61916 336.681 -2.61916 353.703 7.87565 364.203C13.1257 369.442 20.0007 372.072 26.8863 372.072C33.7612 372.072 40.6463 369.442 45.897 364.197L186.017 224.037L326.137 364.184C331.387 369.434 338.272 372.059 345.148 372.059C352.023 372.059 358.908 369.429 364.158 364.189C374.658 353.689 374.658 336.668 364.158 326.168L224.025 186.035L364.145 45.8879C374.645 35.3879 374.645 18.3612 364.145 7.86654Z"
+                            fill="black" />
+                        </svg>
+                    </label>
                     <ul>
                         <li>
                             <a href="#" class="link_limpar" id="link_limpar" type="button" >Limpar dados </a>
@@ -44,51 +44,49 @@
     </header>
     <div class="container">
         <div class="content">
-            <div class="boxTransacao" onsubmit="testaFormulario(event);">
+            <form class="boxTransacao" onsubmit="testaFormulario(event);">
                 <h2>Nova transação</h2>
-                <div class="campos">
+                <div>
                     <div class="campo">
-                        <form>
-                            <label for="tipo_transacao">Tipo de Transação</label>
-                            <select name="tipo_transacao" id="tipo_transacao" required>
-                                <option value="true">Compra</option>
-                                <option value="false">Venda</option>
-                            </select>
-                            </div>
-                            <div id="campo_meio" class="campo">
-                                <label for="nome">Nome da Mercadoria</label>
-                                <input placeholder=" Digite o nome da Mercadoria" required type="text" id="nome">
-                            </div>
-                            <div class="campo">
-                                <label for="valor">Valor</label>
-                                <input placeholder=" R$ 0,00" required type="text" id="valor" maxlength="22" onkeypress="return(MascaraMoeda(this,'.',',',event))" >
-                                                </div>
-                                            </div>
-                                            <input id="botao" type="submit" value="Adicionar transação">
-                        </form>
+                        <label for="tipo_transacao">Tipo de Transação</label>
+                        <select name="tipo_transacao" id="tipo_transacao" required>
+                            <option value="true">Compra</option>
+                            <option value="false">Venda</option>
+                        </select>
+                    </div>
+                    <div id="campo_meio" class="campo">
+                        <label for="nome">Nome da Mercadoria</label>
+                        <input placeholder=" Digite o nome da Mercadoria" required type="text" id="nome">
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Valor</label>
+                        <input placeholder=" R$ 0,00" required type="text" id="valor" maxlength="22" onkeypress="return(MascaraMoeda(this,'.',',',event))" >
+                    </div>
+                </div>
+                <input id="botao" type="submit" value="Adicionar transação">
+            </form>
+            <div class="boxExtrato">
+                <h2>Extrato de transações</h2>
+                <table class="tabelaExtrato">
+                    <thead>
+                        <tr>
+                            <th class="compra"></th>
+                            <th class="">Mercadoria</th>
+                            <th class="elem_direita">Valor</th> 
+                        </tr>
+                    </thead>
+                    <tbody class="corpo_tabela">
+                        <tr>
+                            <td class="compra"></td>
+                            <td class="conteudo_tabela">Nenhuma transação cadastrada</td>
+                        </tr>
+                    </tbody> 
+                    <tfoot></tfoot>
+                </table>
             </div>
-        <div class="boxExtrato">
-            <h2>Extrato de transações</h2>
-            <table class="tabelaExtrato">
-                <thead>
-                    <tr>
-                        <th class="compra"></th>
-                        <th class="">Mercadoria</th>
-                        <th class="elem_direita">Valor</th> 
-                    </tr>
-                </thead>
-                 <tbody class="corpo_tabela">
-                    <tr>
-                        <td class="compra"></td>
-                        <td class="conteudo_tabela">Nenhuma transação cadastrada</td>
-                    </tr>
-                </tbody> 
-                <tfoot></tfoot>
-            </table>
         </div>
-    </div>
-    <footer>
-    </footer>
-    <script src="index.js"></script>
-</body>
-</html>
+        <footer>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+    </html>
