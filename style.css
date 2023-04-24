@@ -160,7 +160,7 @@ html, body {
 }
 
 .compra {
-    width: 20px;
+
 }
 
 .elem_direita {
@@ -195,6 +195,14 @@ footer {
 
 .nav__crossmark, .header__navClose {
     display: none;
+}
+
+.tabela_rodape {
+
+}
+
+.conteudo_rodape {
+    
 }
 
 @media screen and (max-width: 900px) {

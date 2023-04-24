@@ -34,25 +34,26 @@ function desenha_tabela() {
 
     document.querySelector('table.tabelaExtrato tbody').innerHTML += (
     `<tr>
-        <td>${(transacoes[item].compra == 'true' ? ' - ' : ' + ')}</td>
+        <td sclass="compra">${(transacoes[item].compra == 'true' ? ' - ' : ' + ')}</td>
         <td>${transacoes[item].name}</td>
         <td style='text-align:right'>R$&nbsp;${transacoes[item].valor}</td>
     </tr>`)
-    
-    if (transacoes.length > 0) {
-      document.querySelector("table.tabelaExtrato tfoot").innerHTML = `
-        <tr>
-          <td class="tabela_rodape">Total</td>
-          <td class="tabela_rodape">${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
-        </tr>`
-  
-        document.querySelector("table tfoot").innerHTML += `
-        <tr>
-          <td></td>
-          <td>${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
-        </tr>`
     }
-  }
+  if (transacoes.length > 0) {
+    document.querySelector("table.tabelaExtrato tfoot").innerHTML = `
+      <tr>
+        <td class="conteudo_rodape">Total</td>
+        <td class="conteudo_rodape">${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+      </tr>`
+  
+      document.querySelector("table tfoot").innerHTML += `
+      <tr>
+        <td></td>
+        <td>${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+      </tr>`
+    } else {
+      document.querySelector("table.tabelaExtrato tfoot").innerHTML = ``
+    }
 }
 
 
@@ -88,6 +89,7 @@ function deletaLocalStorage() {
       
       if(caixaTexto == true) {
         localStorage.clear();
+        transacoes = [];
         alert("Transações excluídas");
         desenha_tabela();
       } else {
