@@ -42,14 +42,16 @@ function desenha_tabela() {
   if (transacoes.length > 0) {
     document.querySelector("table.tabelaExtrato tfoot").innerHTML = `
       <tr>
-        <td class="conteudo_rodape">Total</td>
-        <td class="conteudo_rodape">${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+        <td></td>
+        <td class="conteudo_rodape tot">Total</td>
+        <td class="conteudo_rodape" style='font-size: large'>${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
       </tr>`
   
       document.querySelector("table tfoot").innerHTML += `
       <tr>
         <td></td>
-        <td>${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+        <td></td>
+        <td class="conteudo_rodape" style='font-weight: normal; font-size: small; line-height: 0px'>${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
       </tr>`
     } else {
       document.querySelector("table.tabelaExtrato tfoot").innerHTML = ``
