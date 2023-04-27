@@ -12,7 +12,6 @@ function desenha_tabela() {
 
   var total = 0;
   let valorInput;
-
  
   if (transacoes.length > 0){
     document.querySelector('table.tabelaExtrato tbody').innerHTML = ''
@@ -24,11 +23,11 @@ function desenha_tabela() {
     </tr>`
   }
   for (item in transacoes) {
-    if(transacoes[item].tipo_transacao == "true") {
+    if(transacoes[item].compra == "true") {
       valorInput = transacoes[item];
-      total -= Number(transacoes[item].valor.replace('.', ('')).replace(',', ('.')));
+      total -= Number(transacoes[item].valor.replaceAll('.', ('')).replace(',', ('.')));
     } else {
-      total += Number(transacoes[item].valor.replace('.', ('')).replace(',', ('.')));
+      total += Number(transacoes[item].valor.replaceAll('.', ('')).replace(',', ('.')));
       }
 
     document.querySelector('table.tabelaExtrato tbody').innerHTML += (
