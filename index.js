@@ -13,7 +13,7 @@ function desenha_tabela() {
   var total = 0;
   let valorInput;
 
-  //limpa os itens da tabela
+ 
   if (transacoes.length > 0){
     document.querySelector('table.tabelaExtrato tbody').innerHTML = ''
   } else {
@@ -23,7 +23,6 @@ function desenha_tabela() {
       <td class="conteudo_tabela">Nenhuma transação cadastrada</td>
     </tr>`
   }
-  //re-escreve no HTML em forma de tabela todos os itens da tabela em suas respectivas posições     
   for (item in transacoes) {
     if(transacoes[item].tipo_transacao == "true") {
       valorInput = transacoes[item];
@@ -34,7 +33,7 @@ function desenha_tabela() {
 
     document.querySelector('table.tabelaExtrato tbody').innerHTML += (
     `<tr>
-        <td sclass="compra">${(transacoes[item].compra == 'true' ? ' - ' : ' + ')}</td>
+        <td class="compra">${(transacoes[item].compra == 'true' ? ' - ' : ' + ')}</td>
         <td>${transacoes[item].name}</td>
         <td style='text-align:right'>R$&nbsp;${transacoes[item].valor}</td>
     </tr>`)
@@ -44,7 +43,7 @@ function desenha_tabela() {
       <tr>
         <td></td>
         <td class="conteudo_rodape tot">Total</td>
-        <td class="conteudo_rodape" style='font-size: large'>${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+        <td class="conteudo_rodape" style='font-size: large'>R$&nbsp;${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
       </tr>`
   
       document.querySelector("table tfoot").innerHTML += `

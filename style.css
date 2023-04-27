@@ -153,10 +153,12 @@ html, body {
     border-bottom: 1px solid #979797;
 }
 
-
-
 .tabelaExtrato th, .tabelaExtrato td {
     padding: 10px;
+}
+
+.compra {
+    width: 20px;
 }
 
 .elem_direita {
